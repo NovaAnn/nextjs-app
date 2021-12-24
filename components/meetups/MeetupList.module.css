@@ -1,0 +1,159 @@
+.list {
+  list-style: none;
+  padding: 0;
+  
+  width: 50%;
+  /* max-width: 40rem; */
+}
+.pDiv{
+
+  width:50%;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.mainDiv{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 3rem auto;
+}
+.searchDiv{
+  width:45%;
+  height:100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (min-width:670px) {
+  .searchDiv{
+    width:35%;
+  }
+}
+@media (min-width:998px) {
+  .searchDiv{
+    width:28%;
+  }
+}
+.searchItem{
+  width:95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #77002e;
+  height:100%;
+  padding:1rem 0;
+  margin-left: 1rem;
+
+}
+.searchItem h5{
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.indSpan{
+  margin:0.2rem 0;
+}
+.searchItem:last-of-type{
+  border-bottom: none;
+}
+.searchItem h3{
+  color: #77002e;
+}
+
+.h3Span{
+  font-weight: 600;
+  margin:0 1rem;
+  
+}
+.h3Count{
+  font-weight: 600;
+  margin:0 0.5rem;
+  border-radius: 50%;
+  background-color:#a10f47;
+  padding: 0.1rem 0.4rem;
+  color: black;
+  font-size: 0.9rem;
+  background-color: #c6bfbf;
+  
+  
+}
+.searchDiv button{
+  padding:0.5rem 1.5rem;
+  border:2px solid #77002e;
+  background-color: white;
+  color:#77002e;
+  margin:1rem auto;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: font-weight 0.2s ease-in-out;
+
+}
+.searchDiv button:hover{
+  font-weight: 600;
+
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 18px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:#77002e;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
