@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 import classes from '../components/meetups/MeetupList.module.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import axios from 'axios';
 
 import MeetupList from '../components/meetups/MeetupList';
 let priceChanged=false;
@@ -115,27 +116,27 @@ new Array(apartment.length).fill(true)
      
 
  
-  async function addMeetupHandler() {
-    const url = '/api/' + props.meetups[0].price;
-    const response = await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(totQuery),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }); 
-    const responseData = await response.json();
-   if (responseData.result){
-    refinedMeetups = responseData.result;
-    setChecking(false);
+  // async function addMeetupHandler() {
+  //   const url = '/api/' + props.meetups[0].price;
+  //   const response = await fetch(url, {
+  //     method: 'POST',
+  //     body: JSON.stringify(totQuery),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   }); 
+  //   const responseData = await response.json();
+  //  if (responseData.result){
+  //   refinedMeetups = responseData.result;
+  //   setChecking(false);
     
    
     
-   }
+  //  }
  
-  }   
+  // }   
 
-    addMeetupHandler();
+  //   addMeetupHandler();
  }
   const handleOnChange = (event) => {
     switch (event.target.name) {
