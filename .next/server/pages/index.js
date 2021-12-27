@@ -103,6 +103,7 @@ var MeetupList_module = __webpack_require__(6672);
 var MeetupList_module_default = /*#__PURE__*/__webpack_require__.n(MeetupList_module);
 ;// CONCATENATED MODULE: external "axios"
 const external_axios_namespaceObject = require("axios");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_namespaceObject);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(1853);
 // EXTERNAL MODULE: ./components/ui/Card.js
@@ -416,22 +417,33 @@ function HomePage(props) {
                 apartmentQuery
             ]
         };
-    // async function addMeetupHandler() {
-    //   const url = '/api/' + props.meetups[0].price;
-    //   const response = await fetch(url, {
-    //     method: 'POST',
-    //     body: JSON.stringify(totQuery),
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   }); 
-    //   const responseData = await response.json();
-    //  if (responseData.result){
-    //   refinedMeetups = responseData.result;
-    //   setChecking(false);
-    //  }
-    // }   
-    //   addMeetupHandler();
+        async function addMeetupHandler() {
+            const url = '/api/' + props.meetups[0].price;
+            console.log(url);
+            const resp1 = await external_axios_default()({
+                method: 'post',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: JSON.stringify(totQuery)
+            });
+            console.log('RESP1');
+            const responseData = await resp1.json();
+            // const response = await fetch(url, {
+            //   method: 'POST',
+            //   body: JSON.stringify(totQuery),
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            // }); 
+            // const responseData = await response.json();
+            if (responseData.result) {
+                refinedMeetups = responseData.result;
+                setChecking(false);
+            }
+        }
+        addMeetupHandler();
     };
     const handleOnChange = (event)=>{
         switch(event.target.name){

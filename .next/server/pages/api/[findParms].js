@@ -26,6 +26,8 @@ __webpack_require__.r(__webpack_exports__);
 // POST /api/new-meetup
 async function handler(req, res) {
     if (req.method === 'POST') {
+        console.log('REQUEST');
+        console.log(req);
         const data = req.body;
         const client = await mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient.connect('mongodb+srv://NovaAnn:kwmwBi9wmLJ0nYBw@cluster0.nn0w8.mongodb.net/myNextDatabase?retryWrites=true&w=majority');
         const db = client.db();

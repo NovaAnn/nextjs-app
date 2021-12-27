@@ -116,27 +116,38 @@ new Array(apartment.length).fill(true)
      
 
  
-  // async function addMeetupHandler() {
-  //   const url = '/api/' + props.meetups[0].price;
-  //   const response = await fetch(url, {
-  //     method: 'POST',
-  //     body: JSON.stringify(totQuery),
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   }); 
-  //   const responseData = await response.json();
-  //  if (responseData.result){
-  //   refinedMeetups = responseData.result;
-  //   setChecking(false);
+  async function addMeetupHandler() {
+    const url = '/api/' + props.meetups[0].price;
+    console.log(url);
+
+    const resp1 = await axios({
+      method: 'post',     //put
+      url: url,
+      headers: {'Content-Type': 'application/json'}, 
+      data: JSON.stringify(totQuery)
+    });
+    console.log('RESP1');
+    const responseData = await resp1.json();
+   
+    // const response = await fetch(url, {
+    //   method: 'POST',
+    //   body: JSON.stringify(totQuery),
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // }); 
+    // const responseData = await response.json();
+   if (responseData.result){
+    refinedMeetups = responseData.result;
+    setChecking(false);
     
    
     
-  //  }
+   }
  
-  // }   
+  }   
 
-  //   addMeetupHandler();
+    addMeetupHandler();
  }
   const handleOnChange = (event) => {
     switch (event.target.name) {

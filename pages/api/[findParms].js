@@ -5,6 +5,8 @@ import { MongoClient } from 'mongodb';
 
 async function handler(req, res) {
   if (req.method === 'POST') {
+    console.log('REQUEST');
+    console.log(req);
     const data = req.body;
 
     const client = await MongoClient.connect(
