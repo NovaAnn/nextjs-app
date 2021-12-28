@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 import classes from '../components/meetups/MeetupList.module.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
-import axios from 'axios';
+
 import { useRouter } from 'next/router';
 
 import MeetupList from '../components/meetups/MeetupList';
