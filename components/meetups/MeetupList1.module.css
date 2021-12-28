@@ -7,4 +7,16 @@
     zoom:120%;
     margin: 0 auto;
   }
-  
+  .mDiv h3 {
+    font-size: 18px!important;
+}
+  .mDiv h6 {
+      font-size: 1.2rem!important;
+  }
+
+  .mDiv address {
+    font-size: 1.2rem!important;
+}
+.mDiv p {
+    font-size: 2rem!important;
+}

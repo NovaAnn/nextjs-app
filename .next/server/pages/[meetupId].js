@@ -207,7 +207,7 @@ function MeetupDetail(props) {
                                             height: "5rem",
                                             marginBottom: "1rem"
                                         },
-                                        src: "https://cdn-icons.flaticon.com/png/128/3545/premium/3545309.png?token=exp=1640661182~hmac=9a412a2ffac62fde8bdf59e63f721c41"
+                                        src: "https://cdn-icons-png.flaticon.com/128/6402/6402517.png"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("span", {
                                         className: (MeetupDetail_module_default()).imgSpan,
