@@ -3,7 +3,7 @@ import classes from './MeetupList.module.css';
 import { Fragment, useState } from 'react';
 
 function MeetupList(props) {
-  console.log(props);
+
  
   return (
     <Fragment>
