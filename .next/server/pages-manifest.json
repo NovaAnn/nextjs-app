@@ -1,10 +1,11 @@
 {
   "/[meetupId]": "pages/[meetupId].js",
   "/_app": "pages/_app.js",
-  "/api/[findParms]": "pages/api/[findParms].js",
+  "/api/mongo-query": "pages/api/mongo-query.js",
   "/api/new-meetup": "pages/api/new-meetup.js",
   "/": "pages/index.js",
   "/new-meetup": "pages/new-meetup.html",
+  "/new-search": "pages/new-search.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"

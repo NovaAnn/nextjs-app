@@ -4,6 +4,7 @@ import { MongoClient } from 'mongodb';
 import classes from '../components/meetups/MeetupList.module.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import axios from 'axios';
+import { useRouter } from 'next/router';
 
 import MeetupList from '../components/meetups/MeetupList';
 let priceChanged=false;
@@ -21,6 +22,7 @@ let searchMode = false;
 
 
 function HomePage(props) {
+  const router = useRouter();
   const locations = props.locationArray.map(item=>{
     return item._id;
   })
@@ -117,17 +119,8 @@ new Array(apartment.length).fill(true)
 
  
   async function addMeetupHandler() {
-    const url = '/api/' + props.meetups[0].price;
-    console.log(url);
-
-    const resp1 = await axios({
-      method: 'post',     //put
-      url: url,
-      headers: {'Content-Type': 'application/json'}, 
-      data: JSON.stringify(totQuery)
-    });
-    console.log('RESP1');
-    const responseData = await resp1.json();
+    console.log('1');
+   console.log(totQuery);
    
     // const response = await fetch(url, {
     //   method: 'POST',
@@ -137,13 +130,15 @@ new Array(apartment.length).fill(true)
     //   },
     // }); 
     // const responseData = await response.json();
-   if (responseData.result){
-    refinedMeetups = responseData.result;
-    setChecking(false);
+  //  if (responseData.result){
+  //   refinedMeetups = responseData.result;
+  //   setChecking(false);
+  
+    
+  router.push({pathname: '/new-search',
+  query: { priceArr:  requiredPrices,locArr:requiredLocations,tenantArr:requiredTenants,aptArr:requiredApartment}}); 
     
    
-    
-   }
  
   }   
 
@@ -292,10 +287,11 @@ new Array(apartment.length).fill(true)
 
       </div>
      
-      {!checking && refinedMeetups && refinedMeetups.length > 0 && <MeetupList meetups={refinedMeetups} />}
+      <MeetupList meetups={props.meetups} />
+      {/* {!checking && refinedMeetups && refinedMeetups.length > 0 && <MeetupList meetups={refinedMeetups} />}
       {!searchMode && <MeetupList meetups={props.meetups} />}
       {!checking && searchMode && refinedMeetups && refinedMeetups.length < 1 && <div className={classes.pDiv}><p>No Results Found</p></div>}
-      {checking && searchMode && refinedMeetups.length < 1 && <div className={classes.pDiv}><p>Searching...</p></div>}
+      {checking && searchMode && refinedMeetups.length < 1 && <div className={classes.pDiv}><p>Searching...</p></div>} */}
 
 
       </div>

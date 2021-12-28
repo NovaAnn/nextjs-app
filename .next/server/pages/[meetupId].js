@@ -207,7 +207,7 @@ function MeetupDetail(props) {
                                             height: "5rem",
                                             marginBottom: "1rem"
                                         },
-                                        src: "https://cdn-icons.flaticon.com/png/128/2182/premium/2182879.png?token=exp=1640132675~hmac=0dcf409868cadbe0a0973c90e156cfe4"
+                                        src: "https://cdn-icons.flaticon.com/png/128/3441/premium/3441529.png?token=exp=1640653734~hmac=3202f1b204039889a14ea35743842cf3"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("span", {
                                         className: (MeetupDetail_module_default()).imgSpan,
@@ -229,7 +229,7 @@ function MeetupDetail(props) {
                                             height: "5rem",
                                             marginBottom: "1rem"
                                         },
-                                        src: "https://cdn-icons.flaticon.com/png/128/1872/premium/1872999.png?token=exp=1640132703~hmac=f9649e96cee213d41921a5d7f3b87bad"
+                                        src: "https://cdn-icons-png.flaticon.com/128/740/740973.png"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx("span", {
                                         className: (MeetupDetail_module_default()).imgSpan,

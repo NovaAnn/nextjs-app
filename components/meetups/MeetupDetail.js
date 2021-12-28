@@ -37,13 +37,13 @@ function MeetupDetail(props) {
             </div>
             <div className="form-group col-md-3" >
                <div className={classes.imgItem} style={{opacity:`${props.refrigerator? 1 : 0.5}`}}>
-                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons.flaticon.com/png/128/2182/premium/2182879.png?token=exp=1640132675~hmac=0dcf409868cadbe0a0973c90e156cfe4"/>
+                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons.flaticon.com/png/128/3441/premium/3441529.png?token=exp=1640653734~hmac=3202f1b204039889a14ea35743842cf3"/>
                  <span className={classes.imgSpan}>Refrigerator</span>
                  </div> 
             </div>
             <div className="form-group col-md-3" >
             <div className={classes.imgItem} style={{opacity:`${props.heater? 1 : 0.5}`}}>
-                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons.flaticon.com/png/128/1872/premium/1872999.png?token=exp=1640132703~hmac=f9649e96cee213d41921a5d7f3b87bad"/>
+                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons-png.flaticon.com/128/740/740973.png"/>
                  <span className={classes.imgSpan}>Heater</span>
                  </div> 
             </div>

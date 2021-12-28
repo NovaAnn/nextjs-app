@@ -24,7 +24,12 @@
 }
 
 .header li {
-  margin-left: 3rem;
+  margin-left: 1rem;
+}
+@media (min-width:600px) {
+  .header li {
+    margin-left: 3rem;
+  }
 }
 
 .header a {
