@@ -37,7 +37,7 @@ function MeetupDetail(props) {
             </div>
             <div className="form-group col-md-3" >
                <div className={classes.imgItem} style={{opacity:`${props.refrigerator? 1 : 0.5}`}}>
-                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons.flaticon.com/png/128/3441/premium/3441529.png?token=exp=1640653734~hmac=3202f1b204039889a14ea35743842cf3"/>
+                 <img style={{height:"5rem",marginBottom:"1rem"}} src="https://cdn-icons.flaticon.com/png/128/3545/premium/3545309.png?token=exp=1640661182~hmac=9a412a2ffac62fde8bdf59e63f721c41"/>
                  <span className={classes.imgSpan}>Refrigerator</span>
                  </div> 
             </div>

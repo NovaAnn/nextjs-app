@@ -95,54 +95,39 @@ new Array(apartment.length).fill(true)
  });
 }
   
-   const locationQuery = {price : {$in : [...requiredLocations]}};
-   const tenantQuery = {tenant : {$in : [...requiredTenants]}};
-   const apartmentQuery = {apartment : {$in : [...requiredApartment]}};
+  //  const locationQuery = {price : {$in : [...requiredLocations]}};
+  //  const tenantQuery = {tenant : {$in : [...requiredTenants]}};
+  //  const apartmentQuery = {apartment : {$in : [...requiredApartment]}};
  
   
-    const searchArray = commonFunction(requiredPrices);
+  //   const searchArray = commonFunction(requiredPrices);
  
-      searchArray.forEach((element,i) => {
-        if (element.length > 1){
-          priceQueryArray[i] = {$and :[{"$expr" : {"$gte" : [{"$toInt" :"$location"} , element[0]]}},
-        {"$expr" : {"$lte" : [{"$toInt" :"$location"} , element[1]]}}
-        ]} 
-        }else {
-          priceQueryArray[i] ={"$expr" : {"$gte" : [{"$toInt" :"$location"} , 80000]}}
-        }
-      });
-     const priceQuery = {$or :[...priceQueryArray]}
+  //     searchArray.forEach((element,i) => {
+  //       if (element.length > 1){
+  //         priceQueryArray[i] = {$and :[{"$expr" : {"$gte" : [{"$toInt" :"$location"} , element[0]]}},
+  //       {"$expr" : {"$lte" : [{"$toInt" :"$location"} , element[1]]}}
+  //       ]} 
+  //       }else {
+  //         priceQueryArray[i] ={"$expr" : {"$gte" : [{"$toInt" :"$location"} , 80000]}}
+  //       }
+  //     });
+  //    const priceQuery = {$or :[...priceQueryArray]}
      
 
-      totQuery = {$and:[priceQuery,locationQuery,tenantQuery,apartmentQuery]};
+  //     totQuery = {$and:[priceQuery,locationQuery,tenantQuery,apartmentQuery]};
      
 
  
-  async function addMeetupHandler() {
-    console.log('1');
-   console.log(totQuery);
-   
-    // const response = await fetch(url, {
-    //   method: 'POST',
-    //   body: JSON.stringify(totQuery),
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // }); 
-    // const responseData = await response.json();
-  //  if (responseData.result){
-  //   refinedMeetups = responseData.result;
-  //   setChecking(false);
   
+    
+ 
     
   router.push({pathname: '/new-search',
   query: { priceArr:  requiredPrices,locArr:requiredLocations,tenantArr:requiredTenants,aptArr:requiredApartment}}); 
     
    
  
-  }   
 
-    addMeetupHandler();
  }
   const handleOnChange = (event) => {
     switch (event.target.name) {

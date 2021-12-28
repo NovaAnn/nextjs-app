@@ -2,7 +2,7 @@
 import { Fragment,useState } from 'react';
 import Head from 'next/head';
 import MeetupList from '../../components/meetups/MeetupList';
-import classes from '../../components/meetups/MeetupList.module.css';
+import classes from '../../components/meetups/MeetupList1.module.css';
 
 let priceArr;
 let locArr;
@@ -17,8 +17,7 @@ let totQuery;
 let data;
 function NewMeetupPage(props) {
     const [sending, setSending] = useState(false);
-    console.log(sending);
-    console.log(props);
+   
     const actualPriceList = [20000, 40000, 60000, 80000];
 
     const commonFunction = (array)=>{
@@ -36,27 +35,19 @@ function NewMeetupPage(props) {
           )
       }
     if (typeof window !== "undefined"){
-        console.log('inside window');
         const urlSearchParams = new URLSearchParams(window.location.search);
         priceArr = urlSearchParams.getAll("priceArr");
         tenantArr = urlSearchParams.getAll("tenantArr");
         locArr = urlSearchParams.getAll("locArr");
         aptArr = urlSearchParams.getAll("aptArr");
-        console.log(priceArr);
-        console.log(tenantArr);
-        console.log(locArr);
-        console.log(aptArr);
+        
 
         locationQuery = {price : {$in : [...locArr]}};
          tenantQuery = {tenant : {$in : [...tenantArr]}};
          apartmentQuery = {apartment : {$in : [...aptArr]}};
-         console.log(locationQuery);
-         console.log(tenantQuery);
-         console.log(apartmentQuery);
+        
          const searchArray = commonFunction(priceArr);
- console.log(searchArray);
       searchArray.forEach((element,i) => {
-          console.log(element);
         if (element.length > 1){
           priceQueryArray[i] = {$and :[{"$expr" : {"$gte" : [{"$toInt" :"$location"} , element[0]]}},
         {"$expr" : {"$lte" : [{"$toInt" :"$location"} , element[1]]}}
@@ -66,7 +57,6 @@ function NewMeetupPage(props) {
         }
       });
    priceQuery = {$or :[...priceQueryArray]}
-   console.log(priceQuery);
 
      totQuery = {$and:[priceQuery,locationQuery,tenantQuery,apartmentQuery]};
 
@@ -81,7 +71,6 @@ function NewMeetupPage(props) {
     
         
         data = await response.json();
-        console.log(data);
         setSending(true);
     
        
