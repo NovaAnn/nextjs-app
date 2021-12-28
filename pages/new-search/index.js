@@ -1,8 +1,6 @@
 // our-domain.com/new-meetup
 import { Fragment,useState } from 'react';
 import Head from 'next/head';
-import NewMeetupForm from '../../components/meetups/NewMeetupForm';
-import { useRouter } from 'next/router';
 import MeetupList from '../../components/meetups/MeetupList';
 import classes from '../../components/meetups/MeetupList.module.css';
 
@@ -18,6 +16,9 @@ let priceQueryArray=[];
 let totQuery;
 let data;
 function NewMeetupPage(props) {
+    const [sending, setSending] = useState(false);
+    console.log(sending);
+    console.log(props);
     const actualPriceList = [20000, 40000, 60000, 80000];
 
     const commonFunction = (array)=>{
@@ -69,34 +70,30 @@ function NewMeetupPage(props) {
 
      totQuery = {$and:[priceQuery,locationQuery,tenantQuery,apartmentQuery]};
 
+     async function addMeetupHandler() {
+        const response = await fetch('/api/mongo-query', {
+          method: 'POST',
+          body: JSON.stringify(totQuery),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+    
+        
+        data = await response.json();
+        console.log(data);
+        setSending(true);
+    
+       
+      }
+      addMeetupHandler();
+
     }
      
-  const router = useRouter;
-  console.log('ROUTERS');
-  console.log(router);
-  const query = router.asPath;
-  console.log(query);
+ 
 
-  const [sending, setSending] = useState(false);
-  console.log(sending);
-  console.log(props);
-  async function addMeetupHandler() {
-    const response = await fetch('/api/mongo-query', {
-      method: 'POST',
-      body: JSON.stringify(totQuery),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    
-    data = await response.json();
-    console.log(data);
-    setSending(true);
-
-   
-  }
-  addMeetupHandler();
+ 
+  
   return (
     <Fragment>
       <Head>

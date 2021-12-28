@@ -1,77 +1,31 @@
+"use strict";
 (() => {
 var exports = {};
 exports.id = 405;
 exports.ids = [405];
 exports.modules = {
 
-/***/ 9673:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"card": "Card_card__73YTa"
-};
-
-
-/***/ }),
-
-/***/ 4117:
+/***/ 3678:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9673);
-/* harmony import */ var _Card_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Card_module_css__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function Card(props) {
-    return(/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: (_Card_module_css__WEBPACK_IMPORTED_MODULE_1___default().card),
-        children: props.children
-    }));
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Card);
-
-
-/***/ }),
-
-/***/ 3168:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ pages),
-  "getStaticProps": () => (/* binding */ getStaticProps)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(6689);
-// EXTERNAL MODULE: external "next/head"
-var head_ = __webpack_require__(968);
-var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-// EXTERNAL MODULE: external "mongodb"
-var external_mongodb_ = __webpack_require__(8013);
-// EXTERNAL MODULE: ./components/meetups/MeetupList.module.css
-var MeetupList_module = __webpack_require__(6672);
-var MeetupList_module_default = /*#__PURE__*/__webpack_require__.n(MeetupList_module);
-;// CONCATENATED MODULE: external "axios"
-const external_axios_namespaceObject = require("axios");
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(1853);
-// EXTERNAL MODULE: ./components/meetups/MeetupList.js + 1 modules
-var MeetupList = __webpack_require__(7944);
-;// CONCATENATED MODULE: ./pages/index.js
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(968);
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8013);
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6672);
+/* harmony import */ var _components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_meetups_MeetupList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7944);
 
 
 
@@ -91,7 +45,7 @@ let requiredTenants = [];
 let requiredApartment = [];
 let searchMode = false;
 function HomePage(props) {
-    const router = (0,router_.useRouter)();
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_4__.useRouter)();
     const locations = props.locationArray.map((item)=>{
         return item._id;
     });
@@ -108,12 +62,12 @@ function HomePage(props) {
     const apartment = props.apartmentArray.map((item)=>{
         return item._id;
     });
-    const { 0: checkedState , 1: setCheckedState  } = (0,external_react_.useState)(new Array(locations.length).fill(true));
-    const { 0: pcheckedState , 1: psetCheckedState  } = (0,external_react_.useState)(new Array(priceList.length).fill(true));
-    const { 0: tcheckedState , 1: tsetCheckedState  } = (0,external_react_.useState)(new Array(tenants.length).fill(true));
-    const { 0: acheckedState , 1: asetCheckedState  } = (0,external_react_.useState)(new Array(apartment.length).fill(true));
-    const { 0: search , 1: setSearch  } = (0,external_react_.useState)(false);
-    const { 0: checking , 1: setChecking  } = (0,external_react_.useState)(false);
+    const { 0: checkedState , 1: setCheckedState  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(new Array(locations.length).fill(true));
+    const { 0: pcheckedState , 1: psetCheckedState  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(new Array(priceList.length).fill(true));
+    const { 0: tcheckedState , 1: tsetCheckedState  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(new Array(tenants.length).fill(true));
+    const { 0: acheckedState , 1: asetCheckedState  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(new Array(apartment.length).fill(true));
+    const { 0: search , 1: setSearch  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    const { 0: checking , 1: setChecking  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const actualPriceList = [
         20000,
         40000,
@@ -302,63 +256,63 @@ function HomePage(props) {
                 }
         }
     };
-    return(/*#__PURE__*/ (0,jsx_runtime_.jsxs)(external_react_.Fragment, {
+    return(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
         children: [
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)((head_default()), {
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
                 children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("title", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
                         children: "React Meetups"
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("meta", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                         name: "description",
                         content: "Browse a huge list of highly active React meetups!"
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("link", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                         rel: "stylesheet",
                         href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("script", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
                         src: "https://kit.fontawesome.com/fdba8ed509.js",
                         crossorigin: "anonymous"
                     })
                 ]
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                className: (MeetupList_module_default()).mainDiv,
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().mainDiv),
                 children: [
-                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                        className: (MeetupList_module_default()).searchDiv,
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().searchDiv),
                         children: [
-                            props.locationArray && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: (MeetupList_module_default()).searchItem,
+                            props.locationArray && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().searchItem),
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("h5", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h5", {
                                         children: "Location"
                                     }),
-                                    props.locationArray.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                                            className: (MeetupList_module_default()).indSpan,
+                                    props.locationArray.map((item, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().indSpan),
                                             children: [
-                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("label", {
-                                                    className: (MeetupList_module_default())["switch"],
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default()["switch"]),
                                                     children: [
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             type: "checkbox",
                                                             name: "location",
                                                             value: item._id,
                                                             checked: checkedState[index],
                                                             onChange: handleOnChange.bind(index)
                                                         }),
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                            className: (MeetupList_module_default()).slider
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().slider)
                                                         })
                                                     ]
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Span,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Span),
                                                     children: item._id
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Count,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Count),
                                                     children: item.count
                                                 })
                                             ]
@@ -366,32 +320,32 @@ function HomePage(props) {
                                     )
                                 ]
                             }),
-                            props.priceArray && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: (MeetupList_module_default()).searchItem,
+                            props.priceArray && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().searchItem),
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("h5", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h5", {
                                         children: "Price"
                                     }),
-                                    priceArray.map((item, index, arr)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                                            className: (MeetupList_module_default()).indSpan,
+                                    priceArray.map((item, index, arr)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().indSpan),
                                             children: [
-                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("label", {
-                                                    className: (MeetupList_module_default())["switch"],
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default()["switch"]),
                                                     children: [
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             type: "checkbox",
                                                             name: "price",
                                                             value: item[0] == "Other" ? 80000 : item[0],
                                                             checked: pcheckedState[index],
                                                             onChange: handleOnChange.bind(index)
                                                         }),
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                            className: (MeetupList_module_default()).slider
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().slider)
                                                         })
                                                     ]
                                                 }),
-                                                item.length > 1 && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                                                    className: (MeetupList_module_default()).h3Span,
+                                                item.length > 1 && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Span),
                                                     children: [
                                                         "$",
                                                         item[0],
@@ -399,12 +353,12 @@ function HomePage(props) {
                                                         item[1]
                                                     ]
                                                 }),
-                                                item.length < 2 && /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Span,
+                                                item.length < 2 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Span),
                                                     children: "Greater than $80000"
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Count,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Count),
                                                     children: props.priceArray[index].count
                                                 })
                                             ]
@@ -412,36 +366,36 @@ function HomePage(props) {
                                     )
                                 ]
                             }),
-                            props.tenantArray && props.tenantArray[0]._id && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: (MeetupList_module_default()).searchItem,
+                            props.tenantArray && props.tenantArray[0]._id && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().searchItem),
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("h5", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h5", {
                                         children: "Tenant Allowed"
                                     }),
-                                    props.tenantArray.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                                            className: (MeetupList_module_default()).indSpan,
+                                    props.tenantArray.map((item, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().indSpan),
                                             children: [
-                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("label", {
-                                                    className: (MeetupList_module_default())["switch"],
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default()["switch"]),
                                                     children: [
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             type: "checkbox",
                                                             name: "tenant",
                                                             value: item._id,
                                                             checked: tcheckedState[index],
                                                             onChange: handleOnChange.bind(index)
                                                         }),
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                            className: (MeetupList_module_default()).slider
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().slider)
                                                         })
                                                     ]
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Span,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Span),
                                                     children: item._id
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Count,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Count),
                                                     children: item.count
                                                 })
                                             ]
@@ -449,36 +403,36 @@ function HomePage(props) {
                                     )
                                 ]
                             }),
-                            props.apartmentArray && props.apartmentArray[0]._id && /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                                className: (MeetupList_module_default()).searchItem,
+                            props.apartmentArray && props.apartmentArray[0]._id && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().searchItem),
                                 children: [
-                                    /*#__PURE__*/ jsx_runtime_.jsx("h5", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h5", {
                                         children: "Apartment Type"
                                     }),
-                                    props.apartmentArray.map((item, index)=>/*#__PURE__*/ (0,jsx_runtime_.jsxs)("span", {
-                                            className: (MeetupList_module_default()).indSpan,
+                                    props.apartmentArray.map((item, index)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().indSpan),
                                             children: [
-                                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("label", {
-                                                    className: (MeetupList_module_default())["switch"],
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default()["switch"]),
                                                     children: [
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("input", {
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                                                             type: "checkbox",
                                                             name: "apartment",
                                                             value: item._id,
                                                             checked: acheckedState[index],
                                                             onChange: handleOnChange.bind(index)
                                                         }),
-                                                        /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                            className: (MeetupList_module_default()).slider
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                            className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().slider)
                                                         })
                                                     ]
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Span,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Span),
                                                     children: item._id
                                                 }),
-                                                /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                                    className: (MeetupList_module_default()).h3Count,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_components_meetups_MeetupList_module_css__WEBPACK_IMPORTED_MODULE_6___default().h3Count),
                                                     children: item.count
                                                 })
                                             ]
@@ -486,14 +440,14 @@ function HomePage(props) {
                                     )
                                 ]
                             }),
-                            /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                                 type: "button",
                                 onClick: submitHandler,
                                 children: "Search"
                             })
                         ]
                     }),
-                    /*#__PURE__*/ jsx_runtime_.jsx(MeetupList/* default */.Z, {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_meetups_MeetupList__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
                         meetups: props.meetups
                     })
                 ]
@@ -503,7 +457,7 @@ function HomePage(props) {
 }
 async function getStaticProps() {
     // fetch data from an API
-    const client = await external_mongodb_.MongoClient.connect('mongodb+srv://NovaAnn:kwmwBi9wmLJ0nYBw@cluster0.nn0w8.mongodb.net/myNextDatabase?retryWrites=true&w=majority');
+    const client = await mongodb__WEBPACK_IMPORTED_MODULE_3__.MongoClient.connect('mongodb+srv://NovaAnn:kwmwBi9wmLJ0nYBw@cluster0.nn0w8.mongodb.net/myNextDatabase?retryWrites=true&w=majority');
     const db = client.db();
     const meetupsCollection = db.collection('meetups');
     const meetups = await meetupsCollection.find().toArray();
@@ -603,7 +557,7 @@ async function getStaticProps() {
         revalidate: 1
     };
 }
-/* harmony default export */ const pages = (HomePage);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
 
 /***/ }),
@@ -611,7 +565,6 @@ async function getStaticProps() {
 /***/ 8013:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("mongodb");
 
 /***/ }),
@@ -619,7 +572,6 @@ module.exports = require("mongodb");
 /***/ 968:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/head");
 
 /***/ }),
@@ -627,7 +579,6 @@ module.exports = require("next/head");
 /***/ 1853:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("next/router");
 
 /***/ }),
@@ -635,7 +586,6 @@ module.exports = require("next/router");
 /***/ 6689:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("react");
 
 /***/ }),
@@ -643,7 +593,6 @@ module.exports = require("react");
 /***/ 997:
 /***/ ((module) => {
 
-"use strict";
 module.exports = require("react/jsx-runtime");
 
 /***/ })
@@ -655,7 +604,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [944], () => (__webpack_exec__(3168)));
+var __webpack_exports__ = __webpack_require__.X(0, [944], () => (__webpack_exec__(3678)));
 module.exports = __webpack_exports__;
 
 })();
