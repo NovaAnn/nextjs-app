@@ -57,7 +57,7 @@ function MainNavigation() {
         children: [
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: (MainNavigation_module_default()).logo,
-                children: "React Meetups"
+                children: "Home.com"
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("nav", {
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {

@@ -47,6 +47,11 @@
     width:28%;
   }
 }
+@media (min-width:1200px) {
+  .searchDiv{
+    width:25%;
+  }
+}
 .searchItem{
   width:95%;
   display: flex;
@@ -75,7 +80,8 @@
 
 .h3Span{
   font-weight: 600;
-  margin:0 1rem;
+  margin:0 0.7rem;
+  font-size: 1rem;
   
 }
 .h3Count{
@@ -109,8 +115,14 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 36px;
-  height: 18px;
+  width: 24px;
+  height: 14px;
+}
+@media (min-width:500px) {
+  .switch {
+    width: 36px;
+    height: 18px;
+  }
 }
 
 .switch input { 
@@ -134,15 +146,22 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 11px;
-  width: 14px;
+  height: 8px;
+  width: 8px;
   left: 4px;
-  bottom: 4px;
+  bottom: 3px;
   background-color: white;
-  -webkit-transition: .4s;
   transition: .4s;
 }
 
+@media (min-width:500px) {
+  .slider:before {
+    height: 11px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+  }
+}
 input:checked + .slider {
   background-color:#77002e;
 }
@@ -152,9 +171,13 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(16px);
+  transform: translateX(10px);
+}
+
+@media (min-width:500px) {
+  input:checked + .slider:before {
+    transform: translateX(16px);
+  }
 }
 
 /* Rounded sliders */

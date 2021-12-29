@@ -195,7 +195,6 @@ var external_react_ = __webpack_require__(6689);
 
 
 function MeetupList(props) {
-    console.log(props);
     return(/*#__PURE__*/ jsx_runtime_.jsx(external_react_.Fragment, {
         children: /*#__PURE__*/ jsx_runtime_.jsx("ul", {
             className: (MeetupList_module_default()).list,
